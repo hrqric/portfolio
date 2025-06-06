@@ -111,10 +111,11 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Portfolio
+              HRQRIC
             </div>
             <div className="hidden md:flex space-x-8">
               {['Home', 'Sobre', 'Projetos', 'Skills', 'Contato'].map((item) => (
+                <a href={`#${activeSection}`}>
                 <button
                   key={item}
                   onClick={() => setActiveSection(item.toLowerCase())}
@@ -123,6 +124,7 @@ const Portfolio = () => {
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
                 </button>
+                </a>
               ))}
             </div>
           </div>
@@ -149,12 +151,18 @@ const Portfolio = () => {
               Transformo ideias em experiências digitais incríveis. Especializado em automação de processos, também sei fazer algumas telas bonitas!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <a href='#projetos'>
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                 Ver Projetos <ArrowRight size={20} />
               </button>
+              </a>
+
+              <a href='resources/CV_CAUE_2025.pdf' download>
               <button className="border border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 flex items-center justify-center gap-2">
                 <Download size={20} /> Baixar Curriculo
               </button>
+              </a>
             </div>
           </div>
         </div>
@@ -199,7 +207,7 @@ const Portfolio = () => {
                   <a href="https://www.linkedin.com/in/cauehrqric/" target='_blank' className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-300">
                     <Linkedin size={24} />
                   </a>
-                  <a onClick={(e) => {e.preventDefault(); navigator.clipboard.writeText(textToCopy); notify()}} className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-300">
+                  <a onClick={(e) => {e.preventDefault(); navigator.clipboard.writeText(textToCopy); navigator.vibrate(300);notify()}} className="cursor-pointer p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-300">
                     <Mail size={24} />
 
                   </a>
@@ -316,17 +324,17 @@ const Portfolio = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a 
-                href="mailto:joao@email.com"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                onClick={(e) => {e.preventDefault(); navigator.clipboard.writeText(textToCopy); navigator.vibrate(300);notify()}}
+                className="cursor-pointer bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 <Mail size={20} />
                 cauehrqric@hotmail.com
               </a>
               <div className="flex gap-4 justify-center">
-                <a href="#" className="p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-300">
+                <a href="https://www.github.com/hrqric" target='_blank' className="p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-300">
                   <Github size={24} />
                 </a>
-                <a href="#" className="p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-300">
+                <a href="https://www.linkedin.com/in/cauehrqric/" target='_blank' className="p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-300">
                   <Linkedin size={24} />
                 </a>
               </div>

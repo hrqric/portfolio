@@ -158,7 +158,7 @@ const Portfolio = () => {
               </button>
               </a>
 
-              <a href='resources/CV_CAUE_2025.pdf' download>
+              <a href='https://drive.usercontent.google.com/download?id=1AkRbRBVapg55uNi1idX3QkT02H2uniWu&export=download&authuser=0&confirm=t&uuid=19494804-3ea9-45b0-ba77-a3637383b16b&at=AN8xHor64gQC_LzpgJjZecxXJmOu:1749749118953' download>
               <button className="border border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 flex items-center justify-center gap-2">
                 <Download size={20} /> Baixar Curriculo
               </button>
